@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header class="container-fluid">
+        <div>
+            <nav class="navbar navbar-light" style="background-color: rgb(0, 0, 26);">
+                <div class="container-fluid">
+                    <ul class="nav navbar">
+                        <li class="nav-item"><a asp-controller="App" asp-action="Index" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a asp-controller="App" asp-action="Contact" class="nav-link">Services</a></li>
+                        <li class="nav-item"><a asp-controller="App" asp-action="Products" class="nav-link">Products</a></li>
+                        <li class="nav-item"><a asp-controller="App" asp-action="About" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a asp-controller="App" asp-action="OurMission" class="nav-link">Our Mission</a></li>
+                        <li class="nav-item"><a asp-controller="App" asp-action="Contact" class="nav-link">Contact</a></li>
+                        <li class="nav-item"><a asp-controller="App" asp-action="Shop" class="nav-link">Shop</a></li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                         <li class="nav-item"><a asp-controller="Account" asp-action="Logout" class="nav-link">Logout</a></li>
+                        }
+                        else
+                        {
+                          <li class="nav-item"><a asp-controller="Account" asp-action="Login" class="nav-link">Login</a></li>
+                        }
+                    </ul>
+                    <div class="nav-link Location"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;&nbsp;Kannur, Kerala, India <span> <img src="assets/images/FrontPage/IndiaFlag.png" height="15px"</span></div>
+                </div>
+            </nav>
+        </div>
+        Welcome to Ace Online Shoe Portal
+    </header>
+    <section>
+        <h2 class="text-center">@ViewBag.Title</h2>
+        @RenderBody()
+    </section>
+    <footer>Ace Automation 2020 All Rights Reserved</footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/index.js"></script>
+    <script src="~/lib/bootstrap/index.js"></script>
+    @RenderSection("scripts", false)
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "ConnectionStrings": {
+    "ShoeConnectionString": "server=(localdb)\\MSSQLLocalDB; Database=ShoePortalDB; Integrated Security=true; MultipleActiveResultSets=true;"
+  },
+
+  "Tokens": {
+    "Key": "xecretKeywqejanedsdsdsdsdsds",
+    "Issuer": "http://localhost:8888",
+    "Audience": "http://localhost:8888"
+  }
+}

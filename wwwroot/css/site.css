@@ -1,0 +1,65 @@
+﻿body {
+}
+
+.product-info {
+    border: 1px solid grey;
+    display: inline-block;
+    padding: 8px 2px;
+    float: left;
+    background-color: lightsteelblue;
+    border-radius: 3px 4px;
+}
+
+.product-info img {
+    box-shadow: 11px 10px 29px 0px rgba(0,0,0,1);
+    border-radius: 5px;
+    width: 150px;
+    height: 150px;
+    
+}
+
+.product-props {
+    width: 250px;
+    height: auto;
+    word-wrap: break-word;
+}
+
+#LoginToggle {
+    cursor: pointer;
+}
+
+.popup-form{
+    padding:5px;
+    border: 2px black inset;
+    display: inline-block;
+}
+
+.popup-form input {
+    width: 200px;
+}
+
+.popup-form label {
+    width 150px;
+    display: inline-block;
+}
+
+.popup-form input[type=checkbox], .popup-form input[type=submit] {
+    width: auto;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: inline;
+}
+
+#Shoethumbnail{
+    height: 120px;
+    width: 120px;
+    border-radius: 5px;
+    border: thin 2px;
+}

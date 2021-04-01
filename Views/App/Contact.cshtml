@@ -1,0 +1,60 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model ContactViewModel
+@{
+    ViewBag.Title = "Contact Us";
+}
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.validate.unobtrusive.min.js"></script>
+}
+
+<div class="col-md-6 offset-md-3">
+    <div class="card card-body">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly"></div>
+
+            <div class="form-group">
+                <div class="col-md-4 col-lg-6 col-xs-12">  
+                   <label asp-for="Name">Your Name:</label>
+                   <input asp-for="Name" type="text" class="form-control">
+                   <span asp-validation-for="Name"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-4 col-lg-6 col-xs-12">
+                    <label asp-for="Email">Email:</label>
+                    <input asp-for="Email" type="email" class="form-control">
+                    <span asp-validation-for="Email"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-4 col-lg-6 col-xs-12">
+                  <label asp-for="Phone">Phone:</label>
+                  <input asp-for="Phone" type="text" class="form-control">
+                  <span asp-validation-for="Phone"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-4 col-lg-6 col-xs-12">
+                   <label asp-for="Subject">Subject:</label>
+                   <input asp-for="Subject" type="text" class="form-control">
+                   <span asp-validation-for="Subject"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12 col-lg-12 col-xs-12">
+                    <label asp-for="Name">Message:</label>
+                    <input type="text" name="message" cols="40" class="form-control">
+                    <span asp-validation-for="Message"></span>
+                </div>
+             </div>
+                <br>
+                <div class="col-md-12 col-lg-12 col-xs-12"> 
+                        <button type="submit" class="btn btn-warning">Submit</button>
+                        <div>@ViewBag.UserMessage</div>
+                </div>
+        </form>
+    </div>
+</div>
